@@ -45,7 +45,7 @@ def main():
     while True:
         print("Use these short codes navigate through the app:\n nw - create a new user \n lg-login  \n ex-exit .")
 
-        short_codes = input("Enter your choice").lower().strip()
+        short_codes = input("Enter your choice:").lower().strip()
         if short_code == 'ex':
             break
         elif short_code == 'nw' :
@@ -58,7 +58,7 @@ def main():
 
 
             save_user(create_user(first_name,last_name,password))
-        elif password == con_password :
+        elif password != con_password :
             print("Password doesnt match")
         elif short_code =='lg' :
             print("-"*50)
@@ -67,6 +67,44 @@ def main():
             user_name = input("Enter user name:").strip()
             password = str(input("Enter password:"))
             user_exist == verify_user(user_name,password)
+            if user_exist == user_name:
+                print(" ")
+                print(f"Welcome {user_name}.Please choose an option")
+                print(' ')
+                while True:
+                    print("-"*50)
+                    print('Navigation codes:\n cc-Create a credential \n dc-Display Credential')
+                    if short_code =='ex':
+                        print(" ")
+                        print(f"Thank you {user_name} for using this app")
+                        break
+                    elif short_code == 'cc':
+                        print(' ')
+                        print("Enter your details")
+                        site_name = input('Enter the site\'s name:').strip()
+                        account_name = input('Enter your account name:').strip()
+                        while True:
+                            print(' ')
+                            print("-"*50)
+                            print('Choose an optionfor entering a password:\n ep-enter existing pasword \n gn-generate password \n ex-exit ')
+                            short_code = input("Enter your choice").lower().strip()
+                            print("-"*50)
+                            if psw_choice == 'ep':
+                                    print(' ')
+                                    password =input("Enter your password:").strip
+                                    break
+                            elif psw_choice == 'gn':
+                                    password = generate_password()
+                                    break
+                            elif psw_choice == 'ex':
+                                    break
+                            else:
+                                    print("Exiting.Try again")
+                            
+
+
+
+
 
 
 
@@ -79,9 +117,8 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
-
-
+     main()
+     
 
 
 
