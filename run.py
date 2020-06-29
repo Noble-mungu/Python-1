@@ -56,7 +56,6 @@ def main():
             password = input("Enter your password:").strip()
             con_password =input("Confirm password:").strip()
 
-
             save_user(create_user(first_name,last_name,password))
         elif password != con_password :
             print("Password doesnt match")
@@ -100,22 +99,20 @@ def main():
                                     break
                             else:
                                     print("Exiting.Try again")
-                            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                        save_credential(create_credential(user_name,site_name,account_name,password))
+                        print(' ')
+                        print(f'Credential Created: Site Name: {site_name} - Account Name: {account_name} - Password: {password}')
+                        print(' ')
+                    elif short_code == 'dc':
+                        print(' ')
+                        if display_credentials(user_name):
+                            print('Your credentials')
+                            print(' ')
+                            for credential in display_credentials(user_name):
+                                print(f'Site Name: {credential.site_name} - Account Name: {credential.account_name} - Password: {credential.password}')
+                            print(' ')  
+                        
+               
 if __name__ == '__main__':
      main()
      
