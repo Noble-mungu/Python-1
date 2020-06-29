@@ -111,7 +111,27 @@ def main():
                             for credential in display_credentials(user_name):
                                 print(f'Site Name: {credential.site_name} - Account Name: {credential.account_name} - Password: {credential.password}')
                             print(' ')  
-                        
+                        else:
+                            print(' ')
+                            print("No credentials saved yet")
+                            print(' ')
+                    elif short_code == 'copy':
+                        print(' ')
+                        chosen_site = input('Enter the site name  to copy: ')
+                        copy_credential(chosen_site)
+                        print('')
+                    else:
+                        print('Oops! Wrong option entered. Try again.')
+
+            else: 
+                print(' ')
+                print('Oops! Wrong details entered. Try again or Create an Account.')       
+        
+        else:
+            print("-"*50)
+            print(' ')
+            print('Oops! Wrong option entered. Try again.')
+                
                
 if __name__ == '__main__':
      main()
