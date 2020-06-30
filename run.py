@@ -60,17 +60,17 @@ def main():
 
        # elif password == con_password :
         #    print("Password doesnt match")
-        #elif short_code =='lg' :
-         #   print("-"*50)
-          #  print(' ')
-           # print("To log in enter your user name and password")
-            #user_name = input("Enter user name:").strip()
-            #password = str(input("Enter password:"))
-            #user_exist == verify_user(user_name,password) 
-        #if user_exist == user_name:
-         #   print(" ")
-          #  print(f"Welcome {user_name}.Please choose an option")
-           # print(' ')  
+        elif short_code =='lg' :
+            print("-"*50)
+            print(' ')
+            print("To log in enter your user name and password")
+            user_name = input("Enter user name:").strip()
+            password = str(input("Enter password:"))
+            user_exist == verify_user(user_name,password) 
+        if user_exist == user_name:
+            print(" ")
+            print(f"Welcome {user_name}.Please choose an option")
+            print(' ')  
                    
 
 
