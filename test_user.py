@@ -13,3 +13,5 @@ def test_get_data(self):
     	"""
   	Test case to confirm that we are getting data from user
   	"""
+if __name__ == '__main__':
+	unittest.main()
