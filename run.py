@@ -1,4 +1,5 @@
-import user
+import pyperclip
+from user_credentials import User , Credential
 
 def create_user(fname,lname,password):
     '''
